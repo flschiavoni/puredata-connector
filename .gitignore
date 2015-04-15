@@ -3,6 +3,7 @@
 *.ko
 *.obj
 *.elf
+*.pd_linux
 
 # Precompiled Headers
 *.gch

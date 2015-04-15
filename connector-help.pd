@@ -1,0 +1,100 @@
+#N canvas 49 297 754 330 10;
+#X msg 249 116 connectall;
+#X msg 247 144 disconnectall;
+#X msg 82 44 connect bng bng;
+#X text 198 38 bng \, cnv \, message \, text \, vu \, hradio \, vradio
+\, vsl \, hsl \, nbx \, tgl \, gatom;
+#X msg 82 105 connect bng hsl;
+#X text 191 12 Connect / disconnect src objects in sink objects;
+#X msg 198 74 disconnect bng hsl;
+#X msg 81 79 connect hsl bng;
+#N canvas 830 233 450 300 test 1;
+#X obj 252 79 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 152 209 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 33 60 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 322 221 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 135 68 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 214 173 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 359 156 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 315 42 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 203 -12 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 26 201 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 69 140 osc~ 440;
+#X obj 20 101 osc~ 440;
+#X obj 99 34 metro 1000;
+#X obj 198 37 metro 1000;
+#X text 28 5 comment;
+#X connect 8 0 0 0;
+#X connect 8 0 1 0;
+#X connect 8 0 2 0;
+#X connect 8 0 3 0;
+#X connect 8 0 5 0;
+#X connect 8 0 6 0;
+#X connect 12 0 13 0;
+#X connect 12 0 13 1;
+#X connect 13 0 12 0;
+#X connect 13 0 12 1;
+#X restore 374 276 pd test;
+#X obj 217 274 connector test;
+#X obj 353 154 metro 500;
+#X obj 353 118 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 376 117 stop;
+#X obj 447 154 metro 500;
+#X obj 447 118 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 470 117 stop;
+#X msg 353 180 connsequence;
+#X msg 448 181 disconnsequence;
+#X obj 558 154 metro 500;
+#X obj 558 118 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 581 117 stop;
+#X msg 558 180 connrandom;
+#X obj 643 154 metro 500;
+#X obj 643 118 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 666 117 stop;
+#X msg 643 180 disconnrandom;
+#X obj 539 118 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 624 118 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 60 13 connect metro metro;
+#X text 472 307 Developed by Flavio Schiavoni to Andre Damiao;
+#X connect 0 0 9 0;
+#X connect 1 0 9 0;
+#X connect 2 0 9 0;
+#X connect 4 0 9 0;
+#X connect 6 0 9 0;
+#X connect 7 0 9 0;
+#X connect 10 0 16 0;
+#X connect 11 0 10 0;
+#X connect 12 0 10 0;
+#X connect 13 0 17 0;
+#X connect 14 0 13 0;
+#X connect 15 0 13 0;
+#X connect 16 0 9 0;
+#X connect 17 0 9 0;
+#X connect 18 0 21 0;
+#X connect 19 0 18 0;
+#X connect 20 0 18 0;
+#X connect 21 0 9 0;
+#X connect 22 0 25 0;
+#X connect 23 0 22 0;
+#X connect 24 0 22 0;
+#X connect 25 0 9 0;
+#X connect 26 0 21 0;
+#X connect 27 0 25 0;
+#X connect 28 0 9 0;
+#X coords 179550 0 179151 1 257 72 0;
